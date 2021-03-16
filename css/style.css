@@ -1,0 +1,523 @@
+@charset "UTF-8";
+/*----------------------------------*/
+/* base
+/*----------------------------------*/
+body {
+    font-family: "Noto Serif","Noto Serif JP";
+    color: #282F35;
+}
+a {
+    text-decoration: none;
+}
+
+/*----------------------------------*/
+/* header
+/*----------------------------------*/
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+}
+#bg-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: url('images/fv.png') no-repeat center/cover;
+    opacity: 1.26;
+   }
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.site-ttl {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.header-ttl a{
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    font-style: italic;
+}
+.header-list {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-item {
+    margin-top: 25px;
+    margin-right: 45px;
+}
+.nav-item:last-of-type {
+    margin-right: 0;
+}
+.nav-item a {
+    color: #fff;
+}
+.nav-item a:hover {
+    font-weight: bold;
+}
+.keyvisual {
+    margin-top: 15%;
+    color: #fff;
+    letter-spacing: 0.4rem;
+}
+.keyvisual-ttl {
+    font-size: 50px;
+    font-style: italic;
+}
+.keyvisual-ttl span {
+    display: block;
+    font-size: 70px;
+}
+.keyvisual-sub {
+    font-size: 35px;
+}
+
+/*----------------------------------*/
+/* concept
+/*----------------------------------*/
+.sec01 {
+    background-color: #fff;
+}
+.sec-ttl-left {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 100px;
+    letter-spacing: 0.3rem;
+    text-align: left;
+}
+.sec-ttl-right {
+    color: #fff;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 100px;
+    letter-spacing: 0.3rem;
+    text-align: right;
+}
+.sec-ttl-right::after {
+    content: "";
+    display: inline-block;
+    background-color: #fff;
+    width: 200px;
+    height: 5px;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+.sec-ttl-left::after {
+    content: "";
+    display: inline-block;
+    background-color: #282f35;
+    width: 200px;
+    height: 5px;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+.caption-b {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+.caption-w {
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+.contens {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+article {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.intro {
+    width: 49%;
+    padding-top: 100px;
+}
+.shop {
+    max-width: 440px;
+    min-width: 240px;
+}
+.section-bottom {
+    font-size: 90px;
+    font-weight: bold;
+    opacity: .1;
+    text-align: right;
+    margin-top: 30px;
+}
+/*----------------------------------*/
+/* menu
+/*----------------------------------*/
+.sec02 {
+    background: url(../images/bar1.jpg);
+}
+.caption-w {
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+.card-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.card {
+    width: 320px;
+    background-color: #fff;
+
+}
+.card-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.card-menu {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px auto;
+}
+.card p {
+    font-size: 14px;
+    padding: 0 20px 20px;
+}
+.more-btn {
+    display: block;
+    max-width: 700px;
+    color: #fff;
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .6);
+    border: 3px solid #fff;
+    border-radius: 60px;
+    padding: 30px 0;
+    margin: 50px auto 0;
+}
+/*----------------------------------*/
+/* question
+/*----------------------------------*/
+.sec03 {
+    background-color: #fff;
+}
+/* アコーディオン全体 */
+.accordion-area {
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin: 50px auto;
+}
+.accordion-area li {
+    margin: 10px 0;
+}
+.accordion-area section {
+    border: 1px solid #ccc;
+}
+/* アコーディオンタイトル */
+.title {
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 1% 1% 1% 50px;
+    transition: all .5s ease;
+    background-color: #707070;
+}
+/* アイコンの＋と− */
+.title::before,
+.title::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+}
+.title::before {
+    top: 48%;
+    right: 15px;
+    transform: rotate(0deg);
+}
+.title::after {
+    top: 48%;
+    right: 15px;
+    transform: rotate(90deg);
+}
+/* クローズというクラスがついたら形状変化　*/
+.title.close::before {
+    transform: rotate(45deg);
+}
+.title.close::after {
+    transform: rotate(-45deg);
+}
+/* アコーディオンで現れるエリア */
+.box {
+    display: none;
+    background: #fff;
+    border: 3px solid #707070;
+    padding: 3% 3% 3% 50px;
+}
+.box p {
+    font-size: 20px;
+}
+/*----------------------------------*/
+/*access
+/*----------------------------------*/
+.sec04 {
+    background: url(../images/Paris-1610247.jpg) no-repeat center/cover;
+    background-color: rgba(0, 0, 0, .6);
+    background-blend-mode: darken;
+}
+.ggmap {
+    width: 50%;
+    position: relative;
+    padding-bottom: 290px;
+}
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.access {
+    color: #fff;
+    font-size: 30px;
+    padding-top: 25px;
+}
+.line-qr {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.us {
+    color: rgba(255, 255, 255, .4);
+    font-size: 90px;
+    padding-right: 120px;
+}
+.line {
+    color: #fff;
+    font-size: 30px;
+    margin-top: 30px;
+}
+/*----------------------------------*/
+/* banner
+/*----------------------------------*/
+.sec05 {
+    background: #000;
+    max-height: 200px;
+}
+.banner {   
+    display: flex;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+}
+.banner img{
+    width: 33.333%;
+    height: auto;
+}
+/*----------------------------------*/
+/* footer
+/*----------------------------------*/
+footer {
+    background-color: #fff;
+    height: 60px;
+}
+footer p{
+    font-size: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*----------------------------------*/
+/*Media Queries
+/*----------------------------------*/
+@media (max-width: 767px) {
+    .contens {
+        width: 73%;
+    }
+    /* ハンバーガーメニュー */
+    .burger-btn{
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 4vw;
+    }
+    .burger-btn .bar{
+        display: block;
+        height: 3px;
+        width: 30px;
+        background-color: #fff;
+    }
+    .bar_top{
+        margin-bottom: 8px;
+      }
+      .bar_mid{
+        margin-bottom: 8px;
+      }
+        /* ハンバーガーメニューが開いたとき */
+    .burger-btn.cross .bar_top{
+        transform: rotate(45deg) translate(8px,8px);
+        transition: .3s;
+    }
+    .burger-btn.cross .bar_mid{
+        opacity: 0;
+        transition: .3s;
+    }
+    .burger-btn.cross .bar_bottom{
+        transform: rotate(-45deg) translate(8px,-8px);
+        transition: .3s;
+    }
+    body.noscroll{
+        overflow: hidden;
+    }
+
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+    }
+    .header-nav{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #282F35;
+      }
+      .header-list{
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav-item{
+        margin: 0 0 30px;
+      }
+      .nav-item:last-of-type{
+        margin-bottom: 0;
+      }
+
+/*----------------------------------*/
+/* header
+/*----------------------------------*/    
+    .header-inner,
+    .inner {
+        padding: 0 4vw;
+    }
+    .keyvisual-ttl {
+        font-size: 30px;
+    }
+    .keyvisual-ttl span {
+        font-size: 40px;
+    }
+    .keyvisual-sub {
+        font-size: 20px;
+    }
+    .sec-ttl-left {
+        font-size: 30px;
+    }
+    
+    
+/*----------------------------------*/
+/* concept
+/*----------------------------------*/
+    article {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+    .caption-b {
+        font-size: 20px;
+        margin-top: 65px;
+    } 
+    .intro {
+        width: 87%;
+        padding: 57px 0 20px 0;
+        margin: 0 auto;
+    } 
+    .section-bottom {
+        font-size: 40px;
+    }
+/*----------------------------------*/
+/* concept
+/*----------------------------------*/
+    .sec-ttl-right {
+        font-size: 30px;
+    }
+    .caption-w {
+        font-size: 20px;
+        margin-top: 65px;
+    }
+/*----------------------------------*/
+/* concept
+/*----------------------------------*/
+    .card-list {
+        display: block;
+        margin-top: 20px;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .more-btn {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 10px 0;
+        margin: 30px auto 0;
+    }
+/*----------------------------------*/
+/* access
+/*----------------------------------*/
+    .ggmap {
+        width: 100%;
+        padding-bottom: 250px;
+        margin-top: 30px;
+    }
+    .line-qr {
+        display: block;
+        text-align: center;
+    }
+    .us {
+        font-size: 40px;
+        padding-right: 0px;
+    }
+    .line {
+        margin-top: 10px;
+    }
+    .sec05 {
+        max-height: 100px;
+    }
+    .banner {
+        height: 100px;
+    }
+
+
+}
